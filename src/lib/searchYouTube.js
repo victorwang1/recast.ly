@@ -19,6 +19,6 @@ var searchYouTube = (options, callback) => {
   })
 };
 
-//searchYouTube = _.debounce(searchYouTube, 2000, true);
+searchYouTube = _.throttle(searchYouTube, 2000, true);
 
 window.searchYouTube = searchYouTube;

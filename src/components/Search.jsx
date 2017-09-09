@@ -8,8 +8,9 @@ var Search = (props) => {
                 }
                 searchYouTube(query, props.handleSearch);
             }
-  return (<form className="search-bar form-inline" onSubmit={(e) => search(e)} onChange={(e) => search(e)}>
-    <input className="form-control" type="text" />
+  return (<form className="search-bar form-inline" onSubmit={(e) => search(e)}
+                                                   onChange={(e) => search(e)}>
+    <input className="form-control" type="text" autoFocus required/>
     <button className="btn hidden-sm-down">
       <span className="glyphicon glyphicon-search"></span>
     </button>
