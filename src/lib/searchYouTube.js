@@ -19,8 +19,6 @@ var searchYouTube = (options, callback) => {
   })
 };
 
-searchYouTube = _.debounce(searchYouTube, 2000, true);
-
-console.log(searchYouTube);
+//searchYouTube = _.debounce(searchYouTube, 2000, true);
 
 window.searchYouTube = searchYouTube;
