@@ -1,19 +1,19 @@
 var Search = (props) => {
-
-  return <form className="search-bar form-inline" onSubmit={function(e) {
-          e.preventDefault();
-          var query = {
-            key: YOUTUBE_API_KEY,
-            query: $('.form-control').val(),
-            max: 5
-          }
-          searchYouTube(query, props.handleSearch);
-      }}>
+  var search = function(e) {
+                e.preventDefault();
+                var query = {
+                  key: YOUTUBE_API_KEY,
+                  query: $('.form-control').val(),
+                  max: 5
+                }
+                searchYouTube(query, props.handleSearch);
+            }
+  return (<form className="search-bar form-inline" onSubmit={(e) => search(e)} onChange={(e) => search(e)}>
     <input className="form-control" type="text" />
     <button className="btn hidden-sm-down">
       <span className="glyphicon glyphicon-search"></span>
     </button>
-  </form>
+  </form>)
 };
 
 
