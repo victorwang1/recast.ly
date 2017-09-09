@@ -18,7 +18,7 @@ class App extends React.Component {
   render() {return <div>
       <nav className="navbar">
         <div className="col-md-6 offset-md-3">
-          <Search handleSearch={this.handleSearch.bind(this)}/>
+          <Search handleSearch={this.handleSearch.bind(this)} />
         </div>
       </nav>
       <div className="row">
