@@ -7,8 +7,10 @@ class App extends React.Component {
     };
   }
   handleSearch(data) {
-    this.setState({data: data});
-    this.setState({currentVideo: data[0]});
+    if (data.length) {
+      this.setState({data: data});
+      this.setState({currentVideo: data[0]});
+    }
   }
   handleClick(video) {
     this.setState({currentVideo: video});
