@@ -15,21 +15,22 @@ class App extends React.Component {
   handleClick(video) {
     this.setState({currentVideo: video});
   }
-  render() {return <div>
-      <nav className="navbar">
-        <div className="col-md-6 offset-md-3">
-          <Search handleSearch={this.handleSearch.bind(this)} />
-        </div>
-      </nav>
-      <div className="row">
-        <div className="col-md-7">
-          <VideoPlayer video={this.state.currentVideo} />
-        </div>
-        <div className="col-md-5">
-          <VideoList videos={this.state.data} handleClick={this.handleClick.bind(this)} />
-        </div>
-      </div>
-    </div>
+  render() {
+    return <div>
+            <nav className="navbar">
+              <div className="col-md-6 offset-md-3">
+                <Search handleSearch={this.handleSearch.bind(this)} />
+              </div>
+            </nav>
+            <div className="row">
+              <div className="col-md-7">
+                <VideoPlayer video={this.state.currentVideo} />
+              </div>
+              <div className="col-md-5">
+                <VideoList videos={this.state.data} handleClick={this.handleClick.bind(this)} />
+              </div>
+            </div>
+          </div>
   }
 }
 
